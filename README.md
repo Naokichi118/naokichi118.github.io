@@ -1,2 +1,1 @@
-# nao-mochizuki.github.io
-My homepage
+# Nao Mochizuki's Homepage
