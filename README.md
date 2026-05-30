@@ -1,6 +1,6 @@
 # Nao Mochizuki's Homepage
 
-Personal portfolio website for Nao Mochizuki (望月 尚), Ph.D. Student at the Graduate School of Mathematics, Nagoya University.
+Personal portfolio website for Nao Mochizuki (望月直央), Ph.D. Student at the Graduate School of Mathematics, Nagoya University.
 
 ## Features
 
