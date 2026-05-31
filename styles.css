@@ -32,7 +32,52 @@ body {
 
 .site-header {
     border-bottom: 1px solid var(--border-color);
-    padding: 3rem 0;
+    padding: 1.25rem 0 3rem;
+}
+
+.header-top {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 1.5rem;
+}
+
+#language-toggle {
+    background-color: transparent;
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    padding: 0.5rem 1rem;
+    border-radius: 999px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+#language-toggle:hover {
+    background-color: var(--subtle-bg);
+    border-color: #bdbdbd;
+}
+
+#language-toggle:focus-visible {
+    outline: 2px solid var(--hover-color);
+    outline-offset: 2px;
+}
+
+.toggle-label {
+    display: none;
+}
+
+body[data-lang="en"] .toggle-label[data-lang="en"],
+body[data-lang="ja"] .toggle-label[data-lang="ja"] {
+    display: inline;
+}
+
+body[data-lang="en"] [lang="ja"] {
+    display: none !important;
+}
+
+body[data-lang="ja"] [lang="en"] {
+    display: none !important;
 }
 
 .hero {
@@ -63,8 +108,7 @@ body {
     margin-top: 0.35rem;
 }
 
-.lead,
-.lead-en {
+.lead {
     font-size: 1.05rem;
     margin-bottom: 0.5rem;
 }
@@ -140,7 +184,7 @@ a:hover {
     }
 
     .site-header {
-        padding: 2rem 0;
+        padding: 1rem 0 2rem;
     }
 
     .hero {
@@ -158,6 +202,10 @@ a:hover {
         text-align: center;
     }
 
+    .header-top {
+        margin-bottom: 1rem;
+    }
+
     .section {
         padding: 2rem 0;
     }
@@ -173,7 +221,6 @@ a:hover {
     }
 
     .lead,
-    .lead-en,
     .section p,
     .section li {
         font-size: 0.95rem;
