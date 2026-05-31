@@ -37,7 +37,7 @@ body {
 
 .header-top {
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     margin-bottom: 1.5rem;
 }
 
@@ -45,6 +45,7 @@ body {
     display: flex;
     align-items: center;
     gap: 0.75rem;
+    flex-wrap: wrap;
 }
 
 .header-link,
@@ -94,10 +95,19 @@ body[data-lang="ja"] [lang="en"] {
 }
 
 .hero {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) 320px;
-    gap: 2rem;
-    align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+
+.hero-stacked .hero-image {
+    width: 100%;
+    max-width: 280px;
+}
+
+.hero-stacked .hero-text {
+    width: 100%;
 }
 
 .page-hero h1 {
@@ -129,12 +139,6 @@ body[data-lang="ja"] [lang="en"] {
 .lead {
     font-size: 1.05rem;
     margin-bottom: 0.5rem;
-}
-
-.hero-image {
-    width: 100%;
-    max-width: 320px;
-    justify-self: end;
 }
 
 .hero-image img {
@@ -206,29 +210,12 @@ a:hover {
         padding: 1rem 0 2rem;
     }
 
-    .hero {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-
-    .hero-image {
-        max-width: 280px;
-        justify-self: center;
-        order: -1;
-    }
-
-    .hero-text {
-        text-align: center;
+    .hero-stacked .hero-image {
+        max-width: 240px;
     }
 
     .header-top {
         margin-bottom: 1rem;
-    }
-
-    .header-actions {
-        width: 100%;
-        justify-content: flex-end;
-        flex-wrap: wrap;
     }
 
     .section {
@@ -237,8 +224,8 @@ a:hover {
 }
 
 @media (max-width: 480px) {
-    .hero-image {
-        max-width: 220px;
+    .hero-stacked .hero-image {
+        max-width: 200px;
     }
 
     .hero h1 {
