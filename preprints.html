@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nao Mochizuki's preprints">
+    <title>Preprints | Nao Mochizuki</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body data-lang="en">
+    <header class="site-header">
+        <div class="container header-top">
+            <div class="header-actions">
+                <a class="header-link" href="index.html">
+                    <span lang="en">Home</span>
+                    <span lang="ja">ホーム</span>
+                </a>
+                <button id="language-toggle" type="button" aria-label="Switch language">
+                    <span class="toggle-label" data-lang="en">日本語</span>
+                    <span class="toggle-label" data-lang="ja">English</span>
+                </button>
+            </div>
+        </div>
+        <div class="container page-hero">
+            <h1>
+                <span lang="en">Preprints</span>
+                <span lang="ja">プレプリント</span>
+            </h1>
+        </div>
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="container">
+                <ol class="publications-list">
+                    <li>Extended Module Categories in Higher Cluster Tilting Theory, 2026 [<a href="https://arxiv.org/abs/2605.24607" target="_blank" rel="noopener noreferrer">arXiv:2605.24607</a>]</li>
+                    <li>Higher exact dg-categories, 2026 (with Hiroyuki Nakaoka) [<a href="https://arxiv.org/abs/2604.05493" target="_blank" rel="noopener noreferrer">arXiv:2604.05493</a>]</li>
+                    <li>Auslander correspondence for proper connective DG-algebras via extended module categories, 2026 [<a href="https://arxiv.org/abs/2602.01761" target="_blank" rel="noopener noreferrer">arXiv:2602.01761</a>]</li>
+                    <li>On the Auslander--Reiten Theory for Extended Hearts of Proper Connective DG Algebras, 2025 (with Marvin Plogmann) [<a href="https://arxiv.org/abs/2505.16560" target="_blank" rel="noopener noreferrer">arXiv:2505.16560</a>]</li>
+                    <li>An enhanced extriangulated subquotient, 2025 (with Yasuaki Ogawa) [<a href="https://arxiv.org/abs/2505.15534" target="_blank" rel="noopener noreferrer">arXiv:2505.15534</a>]</li>
+                    <li>Higher-dimensional generalization of abelian categories via DG Categories, 2025 [<a href="https://arxiv.org/abs/2501.06955" target="_blank" rel="noopener noreferrer">arXiv:2501.06955</a>]</li>
+                </ol>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; <span id="current-year"></span> Nao Mochizuki</p>
+        </div>
+    </footer>
+
+    <script>
+        const body = document.body;
+        const toggle = document.getElementById('language-toggle');
+        const year = document.getElementById('current-year');
+
+        function setLanguage(lang) {
+            body.setAttribute('data-lang', lang);
+            localStorage.setItem('language', lang);
+        }
+
+        const savedLanguage = localStorage.getItem('language');
+        setLanguage(savedLanguage || 'en');
+
+        toggle.addEventListener('click', () => {
+            const current = body.getAttribute('data-lang');
+            setLanguage(current === 'en' ? 'ja' : 'en');
+        });
+
+        year.textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

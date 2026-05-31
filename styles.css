@@ -41,6 +41,13 @@ body {
     margin-bottom: 1.5rem;
 }
 
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.header-link,
 #language-toggle {
     background-color: transparent;
     color: var(--text-color);
@@ -51,13 +58,19 @@ body {
     font-size: 0.95rem;
     font-weight: 600;
     transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
+.header-link:hover,
 #language-toggle:hover {
     background-color: var(--subtle-bg);
     border-color: #bdbdbd;
 }
 
+.header-link:focus-visible,
 #language-toggle:focus-visible {
     outline: 2px solid var(--hover-color);
     outline-offset: 2px;
@@ -85,6 +98,11 @@ body[data-lang="ja"] [lang="en"] {
     grid-template-columns: minmax(0, 1fr) 320px;
     gap: 2rem;
     align-items: center;
+}
+
+.page-hero h1 {
+    font-size: clamp(2.2rem, 5vw, 3.2rem);
+    line-height: 1.1;
 }
 
 .eyebrow {
@@ -207,6 +225,12 @@ a:hover {
         margin-bottom: 1rem;
     }
 
+    .header-actions {
+        width: 100%;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+    }
+
     .section {
         padding: 2rem 0;
     }
@@ -218,6 +242,10 @@ a:hover {
     }
 
     .hero h1 {
+        font-size: 2rem;
+    }
+
+    .page-hero h1 {
         font-size: 2rem;
     }
 
