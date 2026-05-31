@@ -1,23 +1,35 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Nao Mochizuki のホームページ">
+    <meta name="description" content="Nao Mochizuki's personal website">
     <title>Nao Mochizuki | 望月 直央</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body data-lang="en">
     <header class="site-header">
+        <div class="container header-top">
+            <button id="language-toggle" type="button" aria-label="Switch language">
+                <span class="toggle-label" data-lang="en">日本語</span>
+                <span class="toggle-label" data-lang="ja">English</span>
+            </button>
+        </div>
         <div class="container hero">
             <div class="hero-text">
-                <p class="eyebrow">Personal Website</p>
-                <h1>Nao Mochizuki<br><span>望月 直央</span></h1>
-                <p class="lead">名古屋大学多元数理科学研究科 博士後期課程2年</p>
-                <p class="lead-en">Ph.D. Student, Graduate School of Mathematics, Nagoya University</p>
+                <p class="eyebrow">
+                    <span lang="en">Personal Website</span>
+                    <span lang="ja">個人ホームページ</span>
+                </p>
+                <h1>
+                    <span lang="en">Nao Mochizuki</span>
+                    <span lang="ja">望月 直央</span>
+                </h1>
+                <p class="lead" lang="en">Second-year Ph.D. student, Graduate School of Mathematics, Nagoya University</p>
+                <p class="lead" lang="ja">名古屋大学多元数理科学研究科 博士後期課程2年</p>
             </div>
             <div class="hero-image">
-                <img src="IMG_0192.jpeg" alt="Nao Mochizuki">
+                <img src="profile.jpg" alt="Profile photo of Nao Mochizuki">
             </div>
         </div>
     </header>
@@ -25,49 +37,94 @@
     <main>
         <section class="section">
             <div class="container">
-                <h2>About</h2>
-                <p>
-                    名古屋大学多元数理科学研究科の博士後期課程2年です。
-                    圏論，ホモロジー代数，代数の表現論に関心があり，特に DG-algebra，DG-categories，Extriangulated Categories に興味があります。
-                </p>
-                <p>
-                    I am a second-year doctoral student at the Graduate School of Mathematics, Nagoya University.
+                <h2>
+                    <span lang="en">About</span>
+                    <span lang="ja">自己紹介</span>
+                </h2>
+                <p lang="en">
+                    I am a second-year Ph.D. student at the Graduate School of Mathematics, Nagoya University.
                     My research interests include category theory, homological algebra, and representation theory of algebras.
                     In particular, I am interested in DG-algebras, DG-categories, and extriangulated categories.
+                </p>
+                <p lang="ja">
+                    名古屋大学多元数理科学研究科の博士後期課程2年です。
+                    圏論，ホモロジー代数，代数の表現論に関心があり，特に DG-algebra，DG-categories，Extriangulated Categories に興味があります。
                 </p>
             </div>
         </section>
 
         <section class="section alt">
             <div class="container">
-                <h2>Profile</h2>
+                <h2>
+                    <span lang="en">Profile</span>
+                    <span lang="ja">プロフィール</span>
+                </h2>
                 <ul class="profile-list">
-                    <li><strong>氏名 / Name:</strong> 望月 直央 / Nao Mochizuki</li>
-                    <li><strong>所属 / Affiliation:</strong> 名古屋大学多元数理科学研究科</li>
-                    <li><strong>身分 / Position:</strong> 博士後期課程2年 / Second-year doctoral student</li>
-                    <li><strong>研究分野 / Research Fields:</strong> 圏論，ホモロジー代数，代数の表現論</li>
-                    <li><strong>研究キーワード / Keywords:</strong> DG-algebra, DG-categories, Extriangulated Categories</li>
-                    <li><strong>指導教員 / Supervisors:</strong> 中岡宏行，高橋亮 / Hiroyuki Nakaoka, Ryo Takahashi</li>
-                    <li><strong>生年月日 / Date of Birth:</strong> 2000年9月15日 / September 15, 2000</li>
-                    <li><strong>出身 / Birthplace:</strong> 東京 / Tokyo, Japan</li>
+                    <li>
+                        <span lang="en"><strong>Name:</strong> Nao Mochizuki</span>
+                        <span lang="ja"><strong>氏名:</strong> 望月 直央</span>
+                    </li>
+                    <li>
+                        <span lang="en"><strong>Affiliation:</strong> Graduate School of Mathematics, Nagoya University</span>
+                        <span lang="ja"><strong>所属:</strong> 名古屋大学多元数理科学研究科</span>
+                    </li>
+                    <li>
+                        <span lang="en"><strong>Position:</strong> Second-year Ph.D. student</span>
+                        <span lang="ja"><strong>身分:</strong> 博士後期課程2年</span>
+                    </li>
+                    <li>
+                        <span lang="en"><strong>Research Fields:</strong> Category theory, homological algebra, representation theory of algebras</span>
+                        <span lang="ja"><strong>研究分野:</strong> 圏論，ホモロジー代数，代数の表現論</span>
+                    </li>
+                    <li>
+                        <span lang="en"><strong>Keywords:</strong> DG-algebra, DG-categories, Extriangulated Categories</span>
+                        <span lang="ja"><strong>研究キーワード:</strong> DG-algebra, DG-categories, Extriangulated Categories</span>
+                    </li>
+                    <li>
+                        <span lang="en"><strong>Supervisors:</strong> Hiroyuki Nakaoka, Ryo Takahashi</span>
+                        <span lang="ja"><strong>指導教員:</strong> 中岡宏行，高橋亮</span>
+                    </li>
+                    <li>
+                        <span lang="en"><strong>Date of Birth:</strong> September 15, 2000</span>
+                        <span lang="ja"><strong>生年月日:</strong> 2000年9月15日</span>
+                    </li>
+                    <li>
+                        <span lang="en"><strong>Birthplace:</strong> Tokyo, Japan</span>
+                        <span lang="ja"><strong>出身:</strong> 東京</span>
+                    </li>
                 </ul>
             </div>
         </section>
 
         <section class="section">
             <div class="container">
-                <h2>Career</h2>
+                <h2>
+                    <span lang="en">Career</span>
+                    <span lang="ja">経歴</span>
+                </h2>
                 <ul class="career-list">
-                    <li>2025年4月〜現在：名古屋大学多元数理科学研究科 博士後期課程</li>
-                    <li>2023年4月〜2025年3月：名古屋大学多元数理科学研究科 博士前期課程</li>
-                    <li>2019年4月〜2023年3月：東京理科大学理学部第二部数学科</li>
+                    <li>
+                        <span lang="en">April 2025 - Present: Ph.D. Program, Graduate School of Mathematics, Nagoya University</span>
+                        <span lang="ja">2025年4月〜現在：名古屋大学多元数理科学研究科 博士後期課程</span>
+                    </li>
+                    <li>
+                        <span lang="en">April 2023 - March 2025: Master's Program, Graduate School of Mathematics, Nagoya University</span>
+                        <span lang="ja">2023年4月〜2025年3月：名古屋大学多元数理科学研究科 博士前期課程</span>
+                    </li>
+                    <li>
+                        <span lang="en">April 2019 - March 2023: Department of Mathematics, Faculty of Science Division II, Tokyo University of Science</span>
+                        <span lang="ja">2019年4月〜2023年3月：東京理科大学理学部第二部数学科</span>
+                    </li>
                 </ul>
             </div>
         </section>
 
         <section class="section alt">
             <div class="container">
-                <h2>Publications</h2>
+                <h2>
+                    <span lang="en">Publications</span>
+                    <span lang="ja">論文</span>
+                </h2>
                 <ol class="publications-list">
                     <li>Auslander correspondence for truncated connective DG-algebras</li>
                     <li>On the Auslander--Reiten Theory for Extended Hearts of Proper Connective DG Algebras</li>
@@ -79,7 +136,10 @@
 
         <section class="section">
             <div class="container">
-                <h2>Links</h2>
+                <h2>
+                    <span lang="en">Links</span>
+                    <span lang="ja">リンク</span>
+                </h2>
                 <ul class="links-list">
                     <li><a href="mailto:mochizuki.nao.n8@s.mail.nagoya-u.ac.jp">Email</a></li>
                     <li><a href="https://github.com/Naokichi118" target="_blank" rel="noopener noreferrer">GitHub</a></li>
@@ -97,7 +157,24 @@
     </footer>
 
     <script>
-        document.getElementById('current-year').textContent = new Date().getFullYear();
+        const body = document.body;
+        const toggle = document.getElementById('language-toggle');
+        const year = document.getElementById('current-year');
+
+        function setLanguage(lang) {
+            body.setAttribute('data-lang', lang);
+            localStorage.setItem('language', lang);
+        }
+
+        const savedLanguage = localStorage.getItem('language');
+        setLanguage(savedLanguage || 'en');
+
+        toggle.addEventListener('click', () => {
+            const current = body.getAttribute('data-lang');
+            setLanguage(current === 'en' ? 'ja' : 'en');
+        });
+
+        year.textContent = new Date().getFullYear();
     </script>
 </body>
 </html>
