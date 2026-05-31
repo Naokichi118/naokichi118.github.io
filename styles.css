@@ -143,6 +143,17 @@ body[data-lang="ja"] [lang="en"] {
     margin-top: 0.35rem;
 }
 
+.sidebar-links {
+    margin-top: 1.75rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.sidebar-links h2 {
+    font-size: clamp(1.2rem, 1.6vw, 1.45rem);
+    margin-bottom: 0.9rem;
+}
+
 .lead {
     font-size: clamp(1rem, 1.2vw, 1.08rem);
     margin-bottom: 0.5rem;
@@ -195,6 +206,10 @@ main {
 .links-list li,
 .publications-list li {
     margin-bottom: 0.75rem;
+}
+
+.sidebar-links .links-list {
+    padding-left: 1.2rem;
 }
 
 a {
