@@ -124,7 +124,7 @@ body[data-lang="ja"] [lang="en"] {
     width: 100%;
     aspect-ratio: 16 / 10;
     object-fit: cover;
-    object-position: center 18%;
+    object-position: center 12%;
     border-radius: 16px;
     border: 1px solid var(--border-color);
 }
