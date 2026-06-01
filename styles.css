@@ -187,7 +187,7 @@ main {
 }
 
 .section {
-    padding: clamp(2rem, 2.6vw, 2.75rem) 0;
+    padding: clamp(1.2rem, 1.8vw, 1.7rem) 0;
 }
 
 .section.alt {
@@ -196,12 +196,12 @@ main {
 }
 
 .section + .section {
-    margin-top: 1.25rem;
+    margin-top: 0.65rem;
 }
 
 .section h2 {
     font-size: clamp(1.5rem, 2vw, 1.8rem);
-    margin-bottom: 1rem;
+    margin-bottom: 0.85rem;
 }
 
 .section p,
@@ -427,7 +427,11 @@ a:hover {
     }
 
     .section {
-        padding: 2rem 0;
+        padding: 1rem 0;
+    }
+
+    .section + .section {
+        margin-top: 0.5rem;
     }
 
     .content-section-inner {
