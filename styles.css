@@ -311,7 +311,7 @@ main {
 }
 
 .preprints-grid {
-    counter-reset: preprint-order 7;
+    counter-reset: preprint-order 6;
 }
 
 .preprint-card {
