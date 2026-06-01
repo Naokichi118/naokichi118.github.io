@@ -1,54 +1,54 @@
-# Naokichi118 Homepage
+# Naokichi118 ホームページ
 
-This repository contains the source for my personal homepage:
+このリポジトリは、個人ホームページのソースコードです。
 
-- **Home**: profile, research interests, education, career, and organization activities
-- **Papers**: published papers and preprints
-- **Talks**: recent talks and presentations
+## ページ構成
 
-## Site structure
+- `index.html` - ホームページ
+- `papers.html` - 論文一覧
+- `talks.html` - 講演一覧
+- `styles.css` - 共通スタイル
+- `script.js` - 言語切り替えの共通処理
 
-- `index.html` - Home page
-- `papers.html` - Publications page
-- `talks.html` - Talks page
-- `styles.css` - Shared styling
-- `script.js` - Shared language switching behavior
+## 主な機能
 
-## Main features
+- 英語 / 日本語のバイリンガル対応
+- PC・スマートフォン向けのレスポンシブ対応
+- `localStorage` による言語設定の保存
+- Google Scholar、arXiv、メールへのリンク
 
-- Bilingual support: English / 日本語
-- Responsive layout for desktop and mobile
-- Persistent language preference with `localStorage`
-- External links to Google Scholar, arXiv, and email contact
+## 内容の更新方法
 
-## Content update notes
+### ホームページ
+`index.html` を編集して、以下の内容を更新します。
 
-### Home page
-Edit `index.html` to update:
-- profile information
-- research interests
-- career and education history
-- organization / event activities
-- contact links
+- プロフィール情報
+- 研究分野・研究内容
+- 経歴・学歴
+- 世話人・イベント関連情報
+- 連絡先リンク
 
-### Papers page
-Edit `papers.html` to update:
-- published papers
-- preprints
-- arXiv links and author lists
+### 論文ページ
+`papers.html` を編集して、以下を更新します。
 
-### Talks page
-Edit `talks.html` to update:
-- talk titles
-- dates
-- events and locations
+- 公開済み論文
+- プレプリント
+- arXiv のリンクや著者情報
 
-## Deployment
+### 講演ページ
+`talks.html` を編集して、以下を更新します。
 
-This site is hosted with GitHub Pages.
+- 講演タイトル
+- 日付
+- 研究会・セミナー名
+- 会場情報
 
-If you add new content, commit the changes and push them to the repository branch used by GitHub Pages.
+## 公開方法
 
-## License
+このサイトは GitHub Pages で公開しています。
+
+新しい内容を追加した場合は、変更をコミットして、GitHub Pages に設定しているブランチへ push してください。
+
+## ライセンス
 
 © 2026 Naokichi118
