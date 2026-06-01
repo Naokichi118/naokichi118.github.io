@@ -216,6 +216,10 @@ main {
     padding-left: 1.4rem;
 }
 
+.profile-list {
+    margin-top: 1rem;
+}
+
 .profile-list li,
 .career-list li,
 .links-list li,
