@@ -241,7 +241,7 @@ main {
 .sidebar-link-button {
     display: flex;
     align-items: center;
-    gap: 0.7rem;
+    justify-content: center;
     width: 100%;
     padding: 0.72rem 0.9rem;
     border: 1px solid var(--border-color);
@@ -267,19 +267,37 @@ main {
     display: none;
 }
 
+.organization-grid,
 .preprints-grid {
     display: grid;
     gap: 1rem;
-    counter-reset: preprint-order 7;
 }
 
+.organization-card,
 .preprint-card {
-    counter-increment: preprint-order -1;
     border: 1px solid var(--border-color);
     border-radius: 16px;
     background-color: var(--white);
     padding: 1rem 1.1rem;
     box-shadow: 0 1px 2px rgba(17, 17, 17, 0.04);
+}
+
+.organization-title {
+    font-size: clamp(1rem, 1.1vw, 1.08rem);
+    line-height: 1.45;
+    margin-bottom: 0.5rem;
+}
+
+.organization-meta {
+    color: var(--secondary-color);
+}
+
+.preprints-grid {
+    counter-reset: preprint-order 7;
+}
+
+.preprint-card {
+    counter-increment: preprint-order -1;
 }
 
 .preprint-card::before {
