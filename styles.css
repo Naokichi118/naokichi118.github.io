@@ -271,6 +271,7 @@ main {
     height: 1.8rem;
     border-radius: 999px;
     background-color: #eef3ff;
+    font-size: 0.95rem;
     color: var(--accent-color);
     flex-shrink: 0;
 }
