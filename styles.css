@@ -191,7 +191,7 @@ main {
 }
 
 .section.alt {
-    background-color: var(--subtle-bg);
+    background-color: var(--white);
     border-radius: 20px;
 }
 
@@ -257,7 +257,7 @@ main {
 
 .sidebar-link-button:hover {
     transform: translateY(-1px);
-    background-color: var(--subtle-bg);
+    background-color: var(--white);
     border-color: #bdbdbd;
     color: var(--text-color);
     box-shadow: 0 4px 12px rgba(17, 17, 17, 0.08);
