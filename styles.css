@@ -8,8 +8,6 @@
     --white: #ffffff;
     --border-color: #d9d9d9;
     --hover-color: #0b57d0;
-    --published-label-min-width: 118px;
-    --published-label-max-width: 140px;
 }
 
 * {
@@ -370,40 +368,31 @@ main {
     border-color: #c8d0de;
     background: linear-gradient(180deg, #fbfcff 0%, #ffffff 100%);
     padding: 1.15rem 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
 }
 
 .published-title {
     font-size: clamp(1.02rem, 1.15vw, 1.14rem);
     line-height: 1.45;
+    margin: 0;
 }
 
 .published-authors {
-    margin-top: 0.6rem;
+    margin: 0;
     color: var(--secondary-color);
 }
 
-.published-meta-list {
-    margin-top: 0.7rem;
-    display: grid;
-    grid-template-columns: minmax(var(--published-label-min-width), var(--published-label-max-width)) minmax(0, 1fr);
-    gap: 0.55rem 0.8rem;
-    align-items: start;
-}
-
-.published-meta-label {
+.published-venue {
     margin: 0;
-    font-size: 0.85rem;
+    font-size: 0.95rem;
     font-weight: 600;
     color: var(--secondary-color);
-    text-transform: uppercase;
-    letter-spacing: 0.03em;
-}
-
-.published-meta-list dd {
-    margin: 0;
 }
 
 .published-links {
+    margin-top: 0.1rem;
     display: flex;
     flex-wrap: wrap;
     gap: 0.45rem;
@@ -544,19 +533,6 @@ a:hover {
     .preprint-header {
         flex-direction: column-reverse;
         gap: 0.4rem;
-    }
-
-    .published-meta-list {
-        grid-template-columns: 1fr;
-        gap: 0.2rem;
-    }
-
-    .published-meta-list dd:not(:last-child) {
-        margin-bottom: 0.55rem;
-    }
-
-    .published-meta-label {
-        font-size: 0.8rem;
     }
 
     .talk-header {
