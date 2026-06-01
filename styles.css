@@ -271,6 +271,62 @@ main {
     flex-shrink: 0;
 }
 
+.preprints-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+.preprint-card {
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    background-color: var(--white);
+    padding: 1rem 1.1rem;
+    box-shadow: 0 1px 2px rgba(17, 17, 17, 0.04);
+}
+
+.preprint-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0.8rem;
+}
+
+.preprint-title {
+    font-size: clamp(1rem, 1.1vw, 1.08rem);
+    line-height: 1.45;
+}
+
+.preprint-year {
+    border: 1px solid var(--border-color);
+    border-radius: 999px;
+    padding: 0.12rem 0.55rem;
+    font-size: 0.85rem;
+    color: var(--secondary-color);
+    line-height: 1.3;
+    white-space: nowrap;
+}
+
+.preprint-authors {
+    margin-top: 0.65rem;
+    color: var(--secondary-color);
+}
+
+.preprint-links {
+    margin-top: 0.75rem;
+}
+
+.badge-arxiv {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 999px;
+    padding: 0.2rem 0.65rem;
+    background-color: #edf3ff;
+    border: 1px solid #cddcff;
+    font-size: 0.88rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
 a {
     color: var(--accent-color);
 }
@@ -351,5 +407,10 @@ a:hover {
     .header-link,
     #language-toggle {
         font-size: 0.95rem;
+    }
+
+    .preprint-header {
+        flex-direction: column-reverse;
+        gap: 0.4rem;
     }
 }
