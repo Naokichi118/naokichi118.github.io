@@ -1,122 +1,54 @@
-# Nao Mochizuki's Homepage
+# Naokichi118 Homepage
 
-Personal portfolio website for Nao Mochizuki (望月直央), Ph.D. Student at the Graduate School of Mathematics, Nagoya University.
+This repository contains the source for my personal homepage:
 
-## Features
+- **Home**: profile, research interests, education, career, and organization activities
+- **Papers**: published papers and preprints
+- **Talks**: recent talks and presentations
 
-- 🌐 Bilingual support (English/日本語)
-- 📱 Responsive design for mobile and desktop
-- 🎨 Clean, professional academic styling
-- 💾 Language preference saved locally
+## Site structure
 
-## Website Structure
+- `index.html` - Home page
+- `papers.html` - Publications page
+- `talks.html` - Talks page
+- `styles.css` - Shared styling
+- `script.js` - Shared language switching behavior
 
-- `index.html` - Main homepage with content structure
-- `styles.css` - All styling and responsive design
-- `script.js` - Language switching functionality
+## Main features
 
-## How to Update Content
+- Bilingual support: English / 日本語
+- Responsive layout for desktop and mobile
+- Persistent language preference with `localStorage`
+- External links to Google Scholar, arXiv, and email contact
 
-### Updating Personal Information
+## Content update notes
 
-Edit `index.html` and find the relevant section:
+### Home page
+Edit `index.html` to update:
+- profile information
+- research interests
+- career and education history
+- organization / event activities
+- contact links
 
-**About Section:**
-```html
-<section id="about" class="section">
-    <!-- Update the text inside <p lang="en"> for English -->
-    <!-- Update the text inside <p lang="ja"> for Japanese -->
-</section>
-```
+### Papers page
+Edit `papers.html` to update:
+- published papers
+- preprints
+- arXiv links and author lists
 
-**Research Interests:**
-```html
-<section id="research" class="section">
-    <ul>
-        <li>
-            <span lang="en">English text</span>
-            <span lang="ja">日本語テキスト</span>
-        </li>
-    </ul>
-</section>
-```
+### Talks page
+Edit `talks.html` to update:
+- talk titles
+- dates
+- events and locations
 
-### Adding a New Publication
+## Deployment
 
-In `index.html`, find the publications section and add a new `<li>` item:
+This site is hosted with GitHub Pages.
 
-```html
-<ol class="publications-list">
-    <li>
-        <div class="pub-title">Your Publication Title Here</div>
-    </li>
-    <!-- Add more publications here -->
-</ol>
-```
-
-Publications are automatically numbered in order.
-
-### Updating Contact Information
-
-In `index.html`, find the contact section:
-
-```html
-<section id="contact" class="section">
-    <!-- Update or add links here -->
-</section>
-```
-
-## Customizing Design
-
-### Changing Colors
-
-Edit `styles.css` and modify the CSS variables at the top:
-
-```css
-:root {
-    --primary-color: #2c3e50;      /* Header background */
-    --secondary-color: #34495e;    /* Footer background */
-    --accent-color: #3498db;       /* Links and highlights */
-    /* ... */
-}
-```
-
-### Changing Fonts
-
-Modify the `font-family` in `styles.css`:
-
-```css
-body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', ...;
-}
-```
-
-## Language Switching
-
-The website automatically remembers the user's language preference using browser local storage. Click the language toggle button in the header to switch between English and Japanese.
-
-**How it works:**
-- Each content element has `lang="en"` or `lang="ja"` attributes
-- JavaScript toggles the `data-lang` attribute on the `<body>` tag
-- CSS shows/hides content based on the current language
-
-## Hosting on GitHub Pages
-
-This site is configured to be hosted on GitHub Pages at:
-`https://Naokichi118.github.io/nao-mochizuki.github.io`
-
-To enable GitHub Pages:
-1. Go to repository Settings
-2. Navigate to Pages section
-3. Select the main branch as source
-4. Your site will be published automatically
-
-## Browser Compatibility
-
-- Modern browsers (Chrome, Firefox, Safari, Edge)
-- Mobile browsers (iOS Safari, Chrome Mobile)
-- Responsive design adapts to screen sizes
+If you add new content, commit the changes and push them to the repository branch used by GitHub Pages.
 
 ## License
 
-© Nao Mochizuki | 望月 尚
+© 2026 Naokichi118
