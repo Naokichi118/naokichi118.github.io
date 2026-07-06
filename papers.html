@@ -188,25 +188,6 @@
         </div>
     </footer>
 
-    <script>
-        const body = document.body;
-        const toggle = document.getElementById('language-toggle');
-        const year = document.getElementById('current-year');
-
-        function setLanguage(lang) {
-            body.setAttribute('data-lang', lang);
-            localStorage.setItem('language', lang);
-        }
-
-        const savedLanguage = localStorage.getItem('language');
-        setLanguage(savedLanguage || 'en');
-
-        toggle.addEventListener('click', () => {
-            const current = body.getAttribute('data-lang');
-            setLanguage(current === 'en' ? 'ja' : 'en');
-        });
-
-        year.textContent = new Date().getFullYear();
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
