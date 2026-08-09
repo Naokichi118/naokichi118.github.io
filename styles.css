@@ -310,16 +310,8 @@ main {
     font-size: 0.95em;
 }
 
-.preprints-grid {
-    counter-reset: preprint-order 6;
-}
-
-.preprint-card {
-    counter-increment: preprint-order -1;
-}
-
 .preprint-card::before {
-    content: "#" counter(preprint-order);
+    content: "#" attr(data-order);
     display: inline-flex;
     align-items: center;
     border-radius: 999px;
@@ -364,12 +356,7 @@ main {
     margin-top: 0.75rem;
 }
 
-.published-grid {
-    counter-reset: published-order;
-}
-
 .published-card {
-    counter-increment: published-order;
     border-color: #c8d0de;
     background: linear-gradient(180deg, #fbfcff 0%, #ffffff 100%);
     padding: 1.15rem 1.2rem;
@@ -379,7 +366,7 @@ main {
 }
 
 .published-card::before {
-    content: "#" counter(published-order);
+    content: "#" attr(data-order);
     display: inline-flex;
     align-items: center;
     border-radius: 999px;

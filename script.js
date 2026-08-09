@@ -42,6 +42,20 @@
         updateLanguage(savedLang);
     }
 
+    // Set paper numbering from bottom to top (bottom = 1)
+    function initializePaperOrder() {
+        const paperSelectors = ['.preprint-card', '.published-card'];
+
+        paperSelectors.forEach((selector) => {
+            const cards = document.querySelectorAll(selector);
+            const total = cards.length;
+
+            cards.forEach((card, index) => {
+                card.setAttribute('data-order', String(total - index));
+            });
+        });
+    }
+
     // Event listener for language toggle button
     if (languageToggle) {
         languageToggle.addEventListener('click', toggleLanguage);
@@ -49,4 +63,5 @@
 
     // Initialize on page load
     initializeLanguage();
+    initializePaperOrder();
 })();
