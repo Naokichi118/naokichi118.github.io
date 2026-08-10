@@ -343,8 +343,8 @@ main {
 }
 
 .organization-title {
-    font-size: clamp(1rem, 1.1vw, 1.08rem);
-    line-height: 1.45;
+    font-size: 1rem;
+    line-height: 1.5;
     margin-bottom: 0.5rem;
 }
 
@@ -528,6 +528,21 @@ main {
     margin-top: 0.3rem;
     color: var(--secondary-color);
     font-size: 0.92em;
+}
+
+.section .organization-meta,
+.section .preprint-authors,
+.section .published-authors,
+.section .published-venue,
+.section .talk-speakers,
+.section .talk-event,
+.section .talk-location {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.organization-meta strong {
+    font-size: inherit;
 }
 
 .badge-arxiv {
