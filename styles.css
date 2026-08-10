@@ -121,6 +121,11 @@ body[data-lang="en"] .talk-event-native[lang="ja"] {
     padding-bottom: 3rem;
 }
 
+.content-page {
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+}
+
 .sidebar {
     position: sticky;
     top: 20px;
