@@ -380,7 +380,10 @@ main {
     font-size: 0.95em;
 }
 
+/* Keep number badges at their text width in both desktop and mobile grids. */
 .preprint-card::before {
+    width: fit-content;
+    justify-self: start;
     content: "#" attr(data-order);
     display: inline-flex;
     align-items: center;
