@@ -291,8 +291,8 @@ main {
     list-style: none;
     padding-left: 0;
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 0.5rem;
+    grid-template-columns: minmax(0, 1.9fr) minmax(0, 1fr) minmax(0, 1fr);
+    gap: 0.3rem;
     width: 100%;
 }
 
@@ -301,9 +301,6 @@ main {
     min-width: 0;
 }
 
-.sidebar-links-list li:first-child {
-    grid-column: 1 / -1;
-}
 
 .sidebar-link-button {
     display: flex;
@@ -311,13 +308,13 @@ main {
     justify-content: center;
     width: 100%;
     min-height: 44px;
-    padding: 0.6rem 0.75rem;
+    padding: 0.6rem 0.15rem;
     border: 1px solid var(--border-color);
     border-radius: 8px;
     background-color: var(--white);
     color: var(--text-color);
     text-decoration: none;
-    font-size: 0.9rem;
+    font-size: clamp(0.69rem, 1vw, 0.8rem);
     line-height: 1.3;
     letter-spacing: normal;
     white-space: nowrap;
