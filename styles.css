@@ -78,6 +78,14 @@ body {
     justify-content: center;
 }
 
+/* Keep the language button stable when its label changes. */
+#language-toggle {
+    width: 7.5em;
+    flex: 0 0 auto;
+    line-height: 1.65;
+    white-space: nowrap;
+}
+
 .header-link:hover,
 #language-toggle:hover {
     background-color: var(--subtle-bg);
