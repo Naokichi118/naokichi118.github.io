@@ -606,6 +606,10 @@ a:hover {
 }
 
 @media (max-width: 900px) {
+    .sidebar-link-button {
+        font-size: 0.8rem;
+    }
+
     .page-layout {
         grid-template-columns: 1fr;
         gap: 1.25rem;
