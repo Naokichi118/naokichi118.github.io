@@ -642,14 +642,41 @@ a:hover {
         padding-bottom: 2rem;
     }
 
+    /* Keep all four controls on one row, including narrow phones. */
     .header-top {
-        flex-direction: column;
-        align-items: stretch;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.5rem;
+        padding-inline: 12px;
+    }
+
+    .header-actions {
+        flex-wrap: nowrap;
+        gap: 0.25rem;
     }
 
     .language-actions {
-        justify-content: flex-start;
-        margin-left: 0;
+        justify-content: flex-end;
+        margin-left: auto;
+        flex: 0 0 auto;
+    }
+
+    .header-link {
+        padding: 0.4rem 0.5rem;
+        min-height: 44px;
+        font-size: 0.8125rem;
+        white-space: nowrap;
+    }
+
+    #language-toggle {
+        width: 6rem;
+        min-width: 6rem;
+        max-width: 6rem;
+        height: 44px;
+        min-height: 44px;
+        max-height: 44px;
+        flex-basis: 6rem;
+        font-size: 0.8125rem;
     }
 
     .site-header {
@@ -740,9 +767,7 @@ a:hover {
     }
 
     .section p,
-    .section li,
-    .header-link,
-    #language-toggle {
+    .section li {
         font-size: 0.95rem;
     }
 
