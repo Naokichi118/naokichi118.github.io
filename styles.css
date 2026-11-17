@@ -554,7 +554,7 @@ a:hover {
 
 .site-footer {
     border-top: 1px solid var(--border-color);
-    padding: 1.5rem 0;
+    padding: .75rem 0;
     color: var(--secondary-color);
     background-color: var(--white);
 }
@@ -1030,7 +1030,7 @@ a:hover {
 }
 .language-actions { margin-bottom: 6px; }
 /* Keep the bar low while retaining 44px interaction targets. */
-.site-header { padding-top: .25rem; }
+.site-header { padding-top: .5rem; }
 .nav-actions .header-link[aria-current="page"] { height: 44px; }
 .language-actions { margin-bottom: 0; }
 
