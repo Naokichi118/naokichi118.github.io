@@ -900,3 +900,11 @@ a:hover {
     box-shadow: none;
     text-decoration: underline;
 }
+
+/* Organization entries are compact text, with a separate plain link. */
+.organization-grid { gap: 1rem; }
+.organization-item { padding: 0; border: 0; background: none; box-shadow: none; }
+.organization-item .organization-title { font-size: 0.95rem; font-weight: 600; margin-bottom: 0.2rem; line-height: 1.45; }
+.organization-item .organization-meta { font-size: 0.85rem; line-height: 1.5; margin: 0.1rem 0; }
+.organization-item .organization-link { font-size: 0.85rem; line-height: 1.5; margin-top: 0.15rem; }
+.organization-link a { color: var(--accent-color); text-decoration: underline; text-underline-offset: 2px; }
