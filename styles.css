@@ -112,9 +112,6 @@ body {
 
 .nav-actions .header-link[aria-current="page"] {
     background-color: #eaf1fc;
-    color: var(--accent-color);
-    border-color: #9dbbe7;
-    box-shadow: inset 0 -2px 0 var(--accent-color);
 }
 
 .header-link:focus-visible,
