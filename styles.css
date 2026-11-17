@@ -559,6 +559,8 @@ a:hover {
     background-color: var(--white);
 }
 
+.site-footer p { font-size: .85rem; line-height: 1.5; }
+
 @media (max-width: 900px) {
     .sidebar-link-button {
         font-size: 0.8rem;
@@ -963,7 +965,7 @@ a:hover {
     border-radius: 5px;
     background: transparent;
     box-shadow: none;
-    font-size: .85rem;
+    font-size: .9rem;
     font-weight: 500;
     transition: none;
     text-decoration: none;
@@ -981,7 +983,7 @@ a:hover {
 .language-option + .language-option { border-left: 0; }
 .language-option[aria-pressed="true"] { background: #edf2f4; color: var(--accent-color); }
 @media (max-width: 768px) {
-    .nav-actions .header-link { width: 54px; flex-basis: 54px; font-size: 12px; }
+    .nav-actions .header-link { width: 54px; flex-basis: 54px; font-size: 13px; }
     .language-option { width: 60px; font-size: 11px; }
 }
 @media (max-width: 360px) {
