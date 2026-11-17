@@ -1186,3 +1186,16 @@ a:hover {
 .language-option { width: 80px; }
 @media (max-width: 768px) { .language-option { width: 66px; } }
 @media (max-width: 360px) { .language-option { width: 62px; } }
+
+/* Small, immediate year jumps next to the Talks heading. */
+.talks-heading-row { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.25rem; }
+.talks-heading-row h2 { margin: 0; }
+.talk-year-nav { display: flex; gap: .35rem; }
+.talk-year-nav a {
+    display: inline-flex; align-items: center; justify-content: center;
+    min-width: 52px; min-height: 44px; padding: 0 .5rem;
+    border-radius: 8px; background: #eeede8;
+    color: var(--accent-color); font-size: .85rem; text-decoration: none;
+}
+.talk-year-nav a:hover { background: #e5e5df; }
+.talk-year-heading { scroll-margin-top: 70px; }
