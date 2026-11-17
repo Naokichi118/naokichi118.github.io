@@ -955,6 +955,8 @@ a:hover {
 .nav-actions .header-link[aria-current="page"] {
     z-index: 1;
     margin-bottom: -1px;
+    border: 1px solid var(--border-color);
+    border-bottom: 0;
     background: var(--bg-color);
     color: var(--primary-color);
     font-weight: 600;
@@ -970,11 +972,11 @@ a:hover {
 }
 .nav-actions .header-link[aria-current="page"]::before {
     left: -10px;
-    background: radial-gradient(circle at 0 0, transparent 10px, var(--bg-color) 10.5px);
+    background: radial-gradient(circle at 0 0, transparent 9px, var(--border-color) 9px 10px, var(--bg-color) 10px);
 }
 .nav-actions .header-link[aria-current="page"]::after {
     right: -10px;
-    background: radial-gradient(circle at 100% 0, transparent 10px, var(--bg-color) 10.5px);
+    background: radial-gradient(circle at 100% 0, transparent 9px, var(--border-color) 9px 10px, var(--bg-color) 10px);
 }
 /* Keep the bar low while retaining 44px interaction targets. */
 .site-header { padding-top: .5rem; }
@@ -1085,5 +1087,5 @@ a:hover {
 }
 
 @media (min-width: 901px) {
-    .talk-year-nav a { font-size: 1rem; }
+    .sidebar .profile-email { font-size: .9rem; }
 }
