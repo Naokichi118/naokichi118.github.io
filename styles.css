@@ -1077,7 +1077,7 @@ a:hover {
         width: 100%;
         margin-inline: 0;
     }
-    .sidebar-links-list .sidebar-link-button { font-size: 1rem; }
+    .sidebar-links-list .sidebar-link-button { font-size: .9375rem; }
     .sidebar-links-list .sidebar-link-icon {
         width: 16px;
         height: 16px;
@@ -1087,5 +1087,6 @@ a:hover {
 }
 
 @media (min-width: 901px) {
-    .sidebar .profile-email { font-size: .9rem; }
+    .page-layout { grid-template-columns: clamp(320px, 25vw, 340px) minmax(0, 1fr); }
+    .sidebar .profile-email { font-size: .9rem; white-space: nowrap; overflow-wrap: normal; }
 }
