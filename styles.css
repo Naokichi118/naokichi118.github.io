@@ -1214,3 +1214,6 @@ a:hover {
 }
 
 .talk-top-link:hover { color: var(--accent-color); }
+
+.page-top-row { display: flex; justify-content: flex-end; margin-top: .75rem; }
+#page-top { scroll-margin-top: 60px; }
