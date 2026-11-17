@@ -939,3 +939,11 @@ a:hover {
 @media (max-width: 600px) {
     .preprint-authors, .preprint-links { margin-top: 0; }
 }
+
+/* Give the profile photo more space without changing its crop. */
+@media (min-width: 901px) {
+    .sidebar-inner { padding: .8rem; }
+}
+@media (max-width: 600px) {
+    .sidebar-image { max-width: min(280px, 100%); margin-bottom: .8rem; }
+}
