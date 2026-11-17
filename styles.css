@@ -1064,3 +1064,42 @@ a:hover {
     font-weight: 600;
 }
 .talk-year-heading:first-child { margin-top: 0; }
+
+/* Quiet tab-style navigation and a compact language switch. */
+.header-top { align-items: center; flex-wrap: nowrap; gap: .5rem; }
+.nav-actions { gap: .25rem; flex-wrap: nowrap; }
+.nav-actions .header-link {
+    width: 4.5rem;
+    flex: 0 0 4.5rem;
+    height: 44px;
+    border: 0;
+    border-radius: 5px;
+    background: transparent;
+    box-shadow: none;
+    font-size: .85rem;
+    font-weight: 500;
+    transition: none;
+    text-decoration: none;
+}
+.nav-actions .header-link:hover { background: transparent; color: var(--accent-color); }
+.nav-actions .header-link[aria-current="page"] { background: #edf2f4; color: var(--accent-color); }
+.language-actions { border: 0; border-radius: 5px; background: #f0f1ef; }
+.language-option {
+    width: 74px;
+    height: 44px;
+    background: transparent;
+    font-size: .8rem;
+    font-weight: 500;
+}
+.language-option + .language-option { border-left: 0; }
+.language-option[aria-pressed="true"] { background: #edf2f4; color: var(--accent-color); }
+@media (max-width: 768px) {
+    .nav-actions .header-link { width: 54px; flex-basis: 54px; font-size: 12px; }
+    .language-option { width: 60px; font-size: 11px; }
+}
+@media (max-width: 360px) {
+    .header-top { gap: .25rem; }
+    .nav-actions { gap: 0; }
+    .nav-actions .header-link { width: 46px; flex-basis: 46px; }
+    .language-option { width: 56px; }
+}
