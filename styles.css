@@ -835,3 +835,33 @@ a:hover {
     }
 
 }
+
+/* Explicit language selection; fixed equal widths prevent layout shifts. */
+.language-actions {
+    gap: 0;
+    flex-wrap: nowrap;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+}
+.language-option {
+    width: 5.5rem;
+    height: 38px;
+    border: 0;
+    padding: 0;
+    background: var(--white);
+    color: var(--text-color);
+    font-family: inherit;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+.language-option + .language-option { border-left: 1px solid var(--border-color); }
+.language-option[aria-pressed="true"] { background: #eaf1fc; }
+.language-option:focus-visible { outline: 2px solid var(--accent-color); outline-offset: -3px; }
+@media (max-width: 768px) {
+    .language-option { width: 64px; height: 42px; font-size: 12px; }
+}
+@media (max-width: 360px) {
+    .nav-actions .header-link { width: 48px; flex-basis: 48px; font-size: 12px; }
+}

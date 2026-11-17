@@ -7,7 +7,7 @@
     <link rel="canonical" href="https://naokichi118.github.io/talks.html">
     <title>Talks | Nao Mochizuki</title>
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="styles.20261114.min.css?v=20261118-active2">
+    <link rel="stylesheet" href="styles.20261114.min.css?v=20261118-lang">
 </head>
 <body data-lang="en">
     <header class="site-header">
@@ -23,11 +23,9 @@
                     Talks
                 </a>
             </div>
-            <div class="header-actions language-actions">
-                <button id="language-toggle" type="button" aria-label="Switch language">
-                    <span class="toggle-label" data-lang="en">Japanese</span>
-                    <span class="toggle-label" data-lang="ja">English</span>
-                </button>
+            <div class="header-actions language-actions" role="group" aria-label="Language">
+                <button class="language-option" type="button" data-language="en" aria-pressed="true">English</button>
+                <button class="language-option" type="button" data-language="ja" aria-pressed="false">Japanese</button>
             </div>
         </div>
     </header>
@@ -247,25 +245,6 @@
         </div>
     </footer>
 
-    <script>
-        const body = document.body;
-        const toggle = document.getElementById('language-toggle');
-        const year = document.getElementById('current-year');
-
-        function setLanguage(lang) {
-            body.setAttribute('data-lang', lang);
-            localStorage.setItem('language', lang);
-        }
-
-        const savedLanguage = localStorage.getItem('language');
-        setLanguage(savedLanguage || 'en');
-
-        toggle.addEventListener('click', () => {
-            const current = body.getAttribute('data-lang');
-            setLanguage(current === 'en' ? 'ja' : 'en');
-        });
-
-        year.textContent = new Date().getFullYear();
-    </script>
+    <script src="script.js?v=20261118-lang"></script>
 </body>
 </html>
