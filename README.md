@@ -1,104 +1,41 @@
 # Naokichi118 のホームページ
 
-このサイトでは、研究・発表・連絡先などの情報をまとめています。
+ビルドシステムを必要としない、GitHub Pages 用の静的サイトです。
 
-## 内容
+## ファイル
 
-- `index.html` - トップページ
-- `papers.html` - 論文一覧
-- `talks.html` - 講演一覧
-- `styles.css` - スタイル
-- `script.js` - 便利な機能
+- `index.html`: プロフィール、研究分野、経歴、学歴、世話人
+- `papers.html`: 出版済み論文とプレプリント
+- `talks.html`: 年別の講演一覧
+- `styles.css`: 編集するCSS。過去の日付付きCSSではなく、このファイルを編集します。
+- `styles.20261114.min.css`: HTMLが読み込む生成済みCSS
+- `script.js`: 即時言語切替、言語選択の保存、フッター年、論文番号
+- `icons/`: 参照サイトのアイコン。出典は `icons/README.md`
 
-## 論文・講演の追加方法
+## 更新方法
 
-新しいプレプリント、出版済み論文、講演を追加する場合は、該当する一覧に 1 件ずつ情報を追記してください。
+1. 該当HTMLの既存項目を複製し、内容を更新します。日本語・英語は `lang="ja"` / `lang="en"` の両方を保ちます。
+2. 論文・講演は新しい順。論文番号は各一覧内で自動計算され、講演番号は `data-order` に記載されています。
+3. 講演の年を増やすときは、年見出しのIDと上部の年ジャンプも追加します。各年末尾には `↑ Top` を置きます。
+4. CSS変更後は `python3 scripts/build_css.py` を実行し、編集元と生成ファイルを両方コミットします。各HTMLのCSS参照の `?v=` も同じ新しい値に更新します。
+5. Home・Papers・Talksを320px・393px・PC幅で確認します。日英の切替、ページ移動後の言語保持、論文番号、外部リンク、年ジャンプ、Topも確認します。
 
-### 1. プレプリントを追加する場合
-- タイトル
-- 著者
-- 公開年
-- arXiv や bioRxiv などのリンク
-- 必要に応じて DOI や補足説明
+CSS生成はコメント・不要な空白の除去のみです。文字列に空白や区切り記号を含むCSSを追加した場合は生成結果も確認してください。
 
-### 2. 出版済み論文を追加する場合
-- タイトル
-- 著者
-- 掲載誌名 / 会議名
-- 年
-- DOI または出版社リンク
-- 必要に応じて preprint との対応関係
+## 言語設定
 
-### 3. 講演を追加する場合
-- 講演タイトル
-- イベント名
-- 日付
-- スライド / 動画 / 要旨のリンク
-- 必要に応じて開催場所
+初回はEnglishです。選択は即時反映し、再訪後も保持します。
+`language` と `preferred-language` の2つの保存キーは既存利用者との互換用です。片方だけを消さないでください。
 
-### 4. 追加するときの注意
-- 既存の項目と同じ書式で書く
-- 古い順・新しい順のどちらかをサイト全体で統一する
-- リンク切れがないか確認する
-- 可能ならプレプリントと出版版の両方を関連付けて記載する
+## 画像
 
-## 追記例
+プロフィール写真は `picture` / `srcset` で450・600・800pxのAVIFを選び、非対応環境ではWebPに戻ります。写真の変更時は両形式・各サイズを用意し、表示寸法とトリミングを確認してください。
+元写真と旧画像のURLは互換性のため保持しています。ページから参照されない旧ファイルは通常の閲覧では転送されません。
 
-### Publications
+## 内部整理
 
-```html
-<section id="publications">
-  <h2>Publications</h2>
-
-  <h3>Preprints</h3>
-  <ul>
-    <li>
-      <strong>Title of Preprint</strong><br>
-      Author A, Author B<br>
-      <em>arXiv</em>, 2026<br>
-      <a href="https://arxiv.org/abs/1234.56789" target="_blank" rel="noopener noreferrer">arXiv:1234.56789</a>
-    </li>
-  </ul>
-
-  <h3>Published Papers</h3>
-  <ul>
-    <li>
-      <strong>Title of Published Paper</strong><br>
-      Author A, Author B<br>
-      <em>Journal Name</em>, 2026<br>
-      <a href="https://doi.org/10.1234/example-doi" target="_blank" rel="noopener noreferrer">DOI</a>
-    </li>
-  </ul>
-</section>
-```
-
-### Talks
-
-```html
-<section id="talks">
-  <h2>Talks</h2>
-  <ul>
-    <li>
-      <strong>Talk Title</strong><br>
-      Event Name, 2026-06-01<br>
-      <a href="https://example.com/slides" target="_blank" rel="noopener noreferrer">Slides</a> /
-      <a href="https://example.com/video" target="_blank" rel="noopener noreferrer">Video</a>
-    </li>
-  </ul>
-</section>
-```
-
-## 更新時のひとこと
-
-新しい項目を追加するときは、タイトル・著者・日付・リンクをそろえて、同じ形式で追記してください。
+現行3ページとJavaScriptで使わない旧UIのCSSのみを除去しています。媒体条件や詳細度をまたぐルールは、単に最後の宣言だけ残すと表示が変わるため、整理前後の表示比較が必要です。
 
 ## ライセンス
 
 © 2026 Naokichi118
-
-## 表示を変えない軽量化（2026-11-14）
-
-- 写真は画面の解像度に合わせて `profile-450.webp`、`profile-600.webp`、既存の `profile-800.webp` をブラウザが選びます。元の800px版と元写真は残しています。
-- スタイルの編集元は `styles.css` です。変更後は `python3 scripts/build_css.py` を実行し、生成された `styles.20261114.min.css` も一緒にコミットしてください。
-- CSSの生成処理は、このサイトのCSSにあるコメントと不要な空白のみを除きます。新たに文字列に空白・区切り記号を含むルールを足す場合は生成処理も確認してください。
-- 新しいCSSを即時反映したいときは、生成先ファイル名と各HTMLの参照を同じ新しい版に更新します。
