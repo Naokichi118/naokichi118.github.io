@@ -1203,12 +1203,14 @@ a:hover {
 /* Unobtrusive return links after each year's talks. */
 #talks-top { scroll-margin-top: 70px; }
 .talk-top-link {
-    justify-self: start;
+    justify-self: end;
     display: inline-flex;
     align-items: center;
     min-height: 44px;
-    color: var(--accent-color);
-    font-size: .85rem;
-    text-decoration: underline;
-    text-underline-offset: 2px;
+    padding: 0 .25rem;
+    color: var(--secondary-color);
+    font-size: .8rem;
+    text-decoration: none;
 }
+
+.talk-top-link:hover { color: var(--accent-color); }
