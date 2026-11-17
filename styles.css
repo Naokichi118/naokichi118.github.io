@@ -1022,3 +1022,26 @@ a:hover {
 }
 .content-page .talk-event,
 .content-page .talk-location { margin-top: .2rem; font-size: .95rem; }
+
+/* Unadorned numbering, preserving each list's reverse chronological order. */
+.content-page .preprint-card,
+.content-page .published-card,
+.content-page .talk-card { position: relative; padding-left: 1.8rem; }
+.content-page .preprint-card::before,
+.content-page .published-card::before,
+.content-page .talk-card::before {
+    content: attr(data-order) ".";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    color: var(--secondary-color);
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: 400;
+}
