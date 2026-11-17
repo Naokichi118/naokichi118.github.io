@@ -1199,3 +1199,16 @@ a:hover {
 }
 .talk-year-nav a:hover { background: #e5e5df; }
 .talk-year-heading { scroll-margin-top: 70px; }
+
+/* Unobtrusive return links after each year's talks. */
+#talks-top { scroll-margin-top: 70px; }
+.talk-top-link {
+    justify-self: start;
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    color: var(--accent-color);
+    font-size: .85rem;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
