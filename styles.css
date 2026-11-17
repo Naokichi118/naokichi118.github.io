@@ -1,13 +1,13 @@
 :root {
-    --primary-color: #172033;
-    --secondary-color: #5d6676;
-    --accent-color: #1f5fbf;
-    --text-color: #232b3a;
-    --bg-color: #f5f7fa;
-    --subtle-bg: #eef2f7;
+    --primary-color: #292e35;
+    --secondary-color: #59616a;
+    --accent-color: #385a70;
+    --text-color: #292e35;
+    --bg-color: #fafafa;
+    --subtle-bg: #f0f1f2;
     --white: #ffffff;
-    --border-color: #dfe4ea;
-    --hover-color: #174ea6;
+    --border-color: #e1e3e5;
+    --hover-color: #254457;
     --surface-shadow: 0 8px 24px rgba(23, 32, 51, 0.06);
 }
 
@@ -111,7 +111,7 @@ body {
 }
 
 .nav-actions .header-link[aria-current="page"] {
-    background-color: #eaf1fc;
+    background-color: #eaf0f4;
 }
 
 .header-link:focus-visible,
@@ -857,7 +857,7 @@ a:hover {
     cursor: pointer;
 }
 .language-option + .language-option { border-left: 1px solid var(--border-color); }
-.language-option[aria-pressed="true"] { background: #eaf1fc; }
+.language-option[aria-pressed="true"] { background: #eaf0f4; }
 .language-option:focus-visible { outline: 2px solid var(--accent-color); outline-offset: -3px; }
 @media (max-width: 768px) {
     .language-option { width: 64px; height: 42px; font-size: 12px; }
@@ -1045,3 +1045,6 @@ a:hover {
     line-height: 1.5;
     font-weight: 400;
 }
+
+/* Neutral supporting marks; restrained blue is reserved for links and selection. */
+.profile-list li::marker, .timeline li::marker { color: var(--secondary-color); }
