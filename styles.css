@@ -908,3 +908,14 @@ a:hover {
 .organization-item .organization-meta { font-size: 0.85rem; line-height: 1.5; margin: 0.1rem 0; }
 .organization-item .organization-link { font-size: 0.85rem; line-height: 1.5; margin-top: 0.15rem; }
 .organization-link a { color: var(--accent-color); text-decoration: underline; text-underline-offset: 2px; }
+
+/* Slightly denser lists without reducing reading size. */
+.preprints-grid, .published-grid, .talks-grid { gap: 0.65rem; }
+.preprint-card, .published-card, .talk-card { padding: 0.75rem 0.9rem; }
+.preprint-header, .published-header, .talk-header { gap: 0.6rem; }
+.preprint-authors { margin-top: 0.45rem; }
+.preprint-links { margin-top: 0.5rem; }
+@media (max-width: 600px) {
+    .preprint-card, .published-card { row-gap: 0.5rem; }
+    .preprint-authors, .preprint-links { margin-top: 0; }
+}
