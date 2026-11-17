@@ -3,7 +3,7 @@
     'use strict';
 
     // Get DOM elements
-    const languageSwitch = document.querySelector('.language-switch');
+    const languageOptions = document.querySelectorAll('.language-option');
     const body = document.body;
     const currentYearElement = document.getElementById('current-year');
 
@@ -27,7 +27,7 @@
     function updateLanguage(lang) {
         body.setAttribute('data-lang', lang);
         document.documentElement.lang = lang === 'ja' ? 'ja' : 'en';
-        if (languageSwitch) languageSwitch.setAttribute('aria-checked', String(lang === 'ja'));
+        languageOptions.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.language === lang)));
     }
 
     // Initialize page with saved or default language
@@ -50,13 +50,13 @@
         });
     }
 
-    if (languageSwitch) {
-        languageSwitch.addEventListener('click', () => {
-            const lang = body.getAttribute('data-lang') === 'ja' ? 'en' : 'ja';
+    languageOptions.forEach(button => {
+        button.addEventListener('click', () => {
+            const lang = button.dataset.language;
             updateLanguage(lang);
             setLanguagePreference(lang);
         });
-    }
+    });
 
     // Initialize on page load
     initializeLanguage();
