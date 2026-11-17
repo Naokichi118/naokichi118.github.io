@@ -1103,3 +1103,44 @@ a:hover {
     .nav-actions .header-link { width: 46px; flex-basis: 46px; }
     .language-option { width: 56px; }
 }
+
+/* Browser-style tabs join the page surface at the header's lower edge. */
+.site-header { padding: .65rem 0 0; background: #eeede8; }
+.header-top { align-items: flex-end; }
+.nav-actions { align-items: flex-end; }
+.nav-actions .header-link {
+    position: relative;
+    border-radius: 12px 12px 0 0;
+    background: transparent;
+    color: var(--secondary-color);
+}
+.nav-actions .header-link[aria-current="page"] {
+    z-index: 1;
+    margin-bottom: -1px;
+    height: 45px;
+    background: var(--bg-color);
+    color: var(--primary-color);
+    font-weight: 600;
+}
+.nav-actions .header-link[aria-current="page"]::before,
+.nav-actions .header-link[aria-current="page"]::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 10px;
+    height: 10px;
+    pointer-events: none;
+}
+.nav-actions .header-link[aria-current="page"]::before {
+    left: -10px;
+    background: radial-gradient(circle at 0 0, transparent 10px, var(--bg-color) 10.5px);
+}
+.nav-actions .header-link[aria-current="page"]::after {
+    right: -10px;
+    background: radial-gradient(circle at 100% 0, transparent 10px, var(--bg-color) 10.5px);
+}
+.language-actions { margin-bottom: 6px; }
+/* Keep the bar low while retaining 44px interaction targets. */
+.site-header { padding-top: .25rem; }
+.nav-actions .header-link[aria-current="page"] { height: 44px; }
+.language-actions { margin-bottom: 0; }
