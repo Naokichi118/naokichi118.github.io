@@ -7,7 +7,7 @@
     <link rel="canonical" href="https://naokichi118.github.io/">
     <title>望月直央 | Nao Mochizuki</title>
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="styles.20261114.min.css?v=20261118-languagewidth">
+    <link rel="stylesheet" href="styles.20261114.min.css?v=20261118-switch">
 </head>
 <body data-lang="en">
     <header class="site-header">
@@ -24,8 +24,11 @@
                 </a>
             </div>
             <div class="header-actions language-actions" role="group" aria-label="Language">
-                <button class="language-option" type="button" data-language="en" aria-pressed="true">English</button>
-                <button class="language-option" type="button" data-language="ja" aria-pressed="false">Japanese</button>
+                <button class="language-switch" type="button" role="switch" aria-checked="false" aria-label="Japanese language">
+                    <span class="language-label label-en">English</span>
+                    <span class="language-track" aria-hidden="true"><span class="language-thumb"></span></span>
+                    <span class="language-label label-ja">Japanese</span>
+                </button>
             </div>
         </div>
     </header>
@@ -192,6 +195,6 @@
         </div>
     </footer>
 
-    <script src="script.js?v=20261118-lang"></script>
+    <script src="script.js?v=20261118-switch"></script>
 </body>
 </html>
