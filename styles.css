@@ -1048,3 +1048,19 @@ a:hover {
 
 /* Neutral supporting marks; restrained blue is reserved for links and selection. */
 .profile-list li::marker, .timeline li::marker { color: var(--secondary-color); }
+
+/* A comfortable reading measure and consistent list rhythm. */
+.container.content-page { max-width: 964px; }
+.content-page .preprints-grid,
+.content-page .published-grid,
+.content-page .talks-grid { gap: 1.75rem; }
+.content-page .preprint-authors,
+.content-page .published-authors { margin-top: .15rem; }
+.talk-year-heading {
+    font-size: 1.15rem;
+    line-height: 1.4;
+    color: var(--primary-color);
+    margin: 1rem 0 -.75rem;
+    font-weight: 600;
+}
+.talk-year-heading:first-child { margin-top: 0; }
