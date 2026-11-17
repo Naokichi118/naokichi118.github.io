@@ -962,3 +962,31 @@ a:hover {
     padding-bottom: 0;
     margin-bottom: .8rem;
 }
+
+/* Papers and talks follow the same quiet, unboxed layout as Home. */
+.content-page > .main-content > .section {
+    padding: .35rem .25rem;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+}
+.content-page > .main-content > .section + .section { margin-top: 2rem; }
+.content-page > .main-content > .section h2 {
+    border-bottom: 0;
+    padding-bottom: 0;
+    margin-bottom: 1rem;
+}
+.content-page .preprint-card,
+.content-page .published-card,
+.content-page .talk-card {
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+}
+.content-page .preprints-grid,
+.content-page .published-grid,
+.content-page .talks-grid { gap: 1.5rem; }
+.talk-event a { text-decoration: underline; text-underline-offset: 2px; }
