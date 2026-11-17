@@ -947,3 +947,18 @@ a:hover {
 @media (max-width: 600px) {
     .sidebar-image { max-width: min(280px, 100%); margin-bottom: .8rem; }
 }
+
+/* Home content uses simple sections; the profile and other pages stay unchanged. */
+.page-layout > .main-content > .section {
+    padding: .35rem .25rem;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+}
+.page-layout > .main-content > .section + .section { margin-top: 2rem; }
+.page-layout > .main-content > .section h2 {
+    border-bottom: 0;
+    padding-bottom: 0;
+    margin-bottom: .8rem;
+}
