@@ -3,9 +3,9 @@
     --secondary-color: #59616a;
     --accent-color: #385a70;
     --text-color: #292e35;
-    --bg-color: #fafafa;
+    --bg-color: #f7f6f2;
     --subtle-bg: #f0f1f2;
-    --white: #ffffff;
+    --white: #fcfbf8;
     --border-color: #e1e3e5;
     --hover-color: #254457;
     --surface-shadow: 0 8px 24px rgba(23, 32, 51, 0.06);
@@ -35,7 +35,7 @@ body {
 .site-header {
     border-bottom: 1px solid var(--border-color);
     padding: 0.9rem 0;
-    background-color: rgba(255, 255, 255, 0.96);
+    background-color: rgba(252, 251, 248, 0.96);
 }
 
 .header-top {
