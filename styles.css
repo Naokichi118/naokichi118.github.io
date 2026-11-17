@@ -96,6 +96,14 @@ body {
     -webkit-appearance: none;
 }
 
+.nav-actions .header-link {
+    width: 5rem;
+    height: 2.5rem;
+    flex: 0 0 5rem;
+    padding: 0;
+    border-radius: 8px;
+}
+
 .header-link:hover,
 #language-toggle:hover {
     background-color: var(--subtle-bg);
@@ -705,6 +713,13 @@ a:hover {
         min-height: 44px;
         font-size: 0.8125rem;
         white-space: nowrap;
+    }
+
+    .nav-actions .header-link {
+        width: 3.75rem;
+        height: 44px;
+        flex-basis: 3.75rem;
+        padding: 0;
     }
 
     #language-toggle {
