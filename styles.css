@@ -1181,3 +1181,8 @@ a:hover {
     border-radius: 10px;
     background: var(--bg-color);
 }
+
+/* Give both language labels equal, more comfortable side spacing. */
+.language-option { width: 80px; }
+@media (max-width: 768px) { .language-option { width: 66px; } }
+@media (max-width: 360px) { .language-option { width: 62px; } }
