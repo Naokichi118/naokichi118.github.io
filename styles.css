@@ -990,3 +990,20 @@ a:hover {
 .content-page .published-grid,
 .content-page .talks-grid { gap: 1.5rem; }
 .talk-event a { text-decoration: underline; text-underline-offset: 2px; }
+
+/* Plain bibliography entries on Papers. */
+.content-page .preprint-card,
+.content-page .published-card { display: block; }
+.content-page .preprint-card::before,
+.content-page .published-card::before { display: none; }
+.content-page .preprint-header,
+.content-page .published-header { display: block; }
+.content-page .preprint-title,
+.content-page .published-title { font-weight: 600; }
+.content-page .preprint-authors,
+.content-page .published-authors,
+.content-page .published-venue,
+.content-page .paper-year { margin: .2rem 0 0; font-size: .95rem; font-weight: 400; }
+.content-page .paper-year { color: var(--secondary-color); }
+.content-page .preprint-links,
+.content-page .published-links { margin-top: .25rem; }
