@@ -1217,3 +1217,15 @@ a:hover {
 
 .page-top-row { display: flex; justify-content: flex-end; margin-top: .75rem; }
 #page-top { scroll-margin-top: 60px; }
+
+/* Profile references form one quiet row, without separators. */
+.sidebar-links { border-top: 0; padding-top: 0; }
+.sidebar-links-list { display: flex; flex-wrap: nowrap; justify-content: center; gap: 4px; }
+.sidebar-links-list li { flex: 0 0 auto; }
+.sidebar-links-list .sidebar-link-button { font-size: 11px; }
+.sidebar-links-list .sidebar-link-icon { width: 12px; height: 12px; flex-basis: 12px; margin-right: 1px; }
+@container profile-links (min-width: 250px) {
+    .sidebar-links-list { gap: 6px; }
+    .sidebar-links-list .sidebar-link-button { font-size: 12px; }
+    .sidebar-links-list .sidebar-link-icon { width: 14px; height: 14px; flex-basis: 14px; margin-right: 2px; }
+}
