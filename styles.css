@@ -1065,3 +1065,25 @@ a:hover {
     .sidebar-links-list .sidebar-link-button { font-size: 13px; }
     .sidebar-links-list .sidebar-link-icon { width: 14px; height: 14px; flex-basis: 14px; margin-right: 2px; }
 }
+
+/* Stack the profile references only in the desktop sidebar. */
+@media (min-width: 901px) {
+    .sidebar-links-list {
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+        width: 100%;
+        margin-inline: 0;
+    }
+    .sidebar-links-list .sidebar-link-button { font-size: 1rem; }
+    .sidebar-links-list .sidebar-link-icon {
+        width: 16px;
+        height: 16px;
+        flex-basis: 16px;
+        margin-right: 3px;
+    }
+}
+
+@media (min-width: 901px) {
+    .talk-year-nav a { font-size: 1rem; }
+}
