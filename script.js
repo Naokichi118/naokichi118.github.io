@@ -14,17 +14,32 @@
 
     // Get saved language preference or default to English
     function getLanguagePreference() {
-        return localStorage.getItem('language') || localStorage.getItem('preferred-language') || 'en';
+        for (const key of ['language', 'preferred-language']) {
+            try {
+                const lang = localStorage.getItem(key);
+                if (lang === 'en' || lang === 'ja') return lang;
+            } catch (_) {
+                // Storage may be unavailable; switching still works in this page.
+            }
+        }
+        return 'en';
     }
 
     // Save language preference
     function setLanguagePreference(lang) {
-        localStorage.setItem('preferred-language', lang);
-        localStorage.setItem('language', lang);
+        if (lang !== 'en' && lang !== 'ja') return;
+        for (const key of ['preferred-language', 'language']) {
+            try {
+                localStorage.setItem(key, lang);
+            } catch (_) {
+                // Keep the selected language even when it cannot be persisted.
+            }
+        }
     }
 
     // Update the page language
     function updateLanguage(lang) {
+        if (lang !== 'en' && lang !== 'ja') lang = 'en';
         body.setAttribute('data-lang', lang);
         document.documentElement.lang = lang === 'ja' ? 'ja' : 'en';
         languageOptions.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.language === lang)));

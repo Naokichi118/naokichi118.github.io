@@ -34,15 +34,12 @@ body {
 
 .site-header {
     border-bottom: 1px solid var(--border-color);
-    padding: 0.9rem 0;
     background-color: rgba(252, 251, 248, 0.96);
 }
 
 .header-top {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
-    gap: 1rem;
 }
 
 .header-actions {
@@ -77,11 +74,7 @@ body {
 }
 
 .nav-actions .header-link {
-    width: 5rem;
-    height: 2.5rem;
-    flex: 0 0 5rem;
     padding: 0;
-    border-radius: 8px;
 }
 .header-link:hover {
     background-color: var(--subtle-bg);
@@ -170,8 +163,6 @@ body[data-lang="en"] .talk-event-native[lang="ja"] {
     container-type: inline-size;
     container-name: profile-links;
     margin-top: 1rem;
-    padding-top: 1rem;
-    border-top: 1px solid var(--border-color);
 }
 
 .sidebar-links h2 {
@@ -265,10 +256,6 @@ main {
 .sidebar-links-list {
     list-style: none;
     padding-left: 0;
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 0.3rem;
-    width: 100%;
 }
 
 .sidebar-links-list li {
@@ -277,20 +264,9 @@ main {
 }
 
 
-.sidebar-links-list li:first-child {
-    grid-column: 1 / -1;
-}
 
-/* Use the actual panel width, not the device width. */
-@container profile-links (min-width: 360px) {
-    .sidebar-links-list {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
 
-    .sidebar-links-list li:first-child {
-        grid-column: auto;
-    }
-}
+
 
 .sidebar-link-button {
     display: flex;
@@ -350,7 +326,6 @@ main {
     border: 1px solid var(--border-color);
     border-radius: 12px;
     background-color: #fbfcfe;
-    padding: 1rem 1.1rem;
     box-shadow: none;
 }
 
@@ -363,10 +338,6 @@ main {
 .organization-meta {
     color: var(--secondary-color);
     font-size: 0.92em;
-}
-
-.organization-meta strong {
-    font-size: 0.95em;
 }
 
 /* Keep number badges at their text width in both desktop and mobile grids. */
@@ -412,13 +383,11 @@ main {
 }
 
 .preprint-authors {
-    margin-top: 0.65rem;
     color: var(--secondary-color);
     grid-column: 1 / -1;
 }
 
 .preprint-links {
-    margin-top: 0.75rem;
     grid-column: 1 / -1;
 }
 
@@ -732,24 +701,14 @@ a:hover {
 .language-actions {
     gap: 0;
     flex-wrap: nowrap;
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-    overflow: hidden;
 }
 .language-option {
-    width: 5.5rem;
-    height: 38px;
     border: 0;
     padding: 0;
-    background: var(--white);
     color: var(--text-color);
     font-family: inherit;
-    font-size: 0.9rem;
-    font-weight: 600;
     cursor: pointer;
 }
-.language-option + .language-option { border-left: 1px solid var(--border-color); }
-.language-option[aria-pressed="true"] { background: #eaf0f4; }
 .language-option:focus-visible { outline: 2px solid var(--accent-color); outline-offset: -3px; }
 @media (max-width: 768px) {
     .language-option { width: 64px; height: 42px; font-size: 12px; }
@@ -765,10 +724,8 @@ a:hover {
 }
 
 .sidebar .profile-email { margin-top: 0.6rem; font-size: 0.8rem; overflow-wrap: anywhere; color: var(--secondary-color); }
-.sidebar-links-list { grid-template-columns: 1fr; }
-@container profile-links (min-width: 360px) {
-    .sidebar-links-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-}
+
+
 
 /* Compact profile references, rather than prominent action buttons. */
 .sidebar-links-list .sidebar-link-button {
@@ -781,7 +738,6 @@ a:hover {
     border-radius: 0;
     background: transparent;
     color: var(--accent-color);
-    font-size: 0.8rem;
     font-weight: 400;
     box-shadow: none;
     transition: none;
@@ -876,9 +832,6 @@ a:hover {
     background: transparent;
     box-shadow: none;
 }
-.content-page .preprints-grid,
-.content-page .published-grid,
-.content-page .talks-grid { gap: 1.5rem; }
 .talk-event a { text-decoration: underline; text-underline-offset: 2px; }
 
 /* Plain bibliography entries on Papers. */
@@ -955,15 +908,13 @@ a:hover {
 .talk-year-heading:first-child { margin-top: 0; }
 
 /* Quiet tab-style navigation and a compact language switch. */
-.header-top { align-items: center; flex-wrap: nowrap; gap: .5rem; }
+.header-top { flex-wrap: nowrap; gap: .5rem; }
 .nav-actions { gap: .25rem; flex-wrap: nowrap; }
 .nav-actions .header-link {
     width: 4.5rem;
     flex: 0 0 4.5rem;
     height: 44px;
     border: 0;
-    border-radius: 5px;
-    background: transparent;
     box-shadow: none;
     font-size: .9rem;
     font-weight: 500;
@@ -971,17 +922,15 @@ a:hover {
     text-decoration: none;
 }
 .nav-actions .header-link:hover { background: transparent; color: var(--accent-color); }
-.nav-actions .header-link[aria-current="page"] { background: #edf2f4; color: var(--accent-color); }
-.language-actions { border: 0; border-radius: 5px; background: #f0f1ef; }
+.language-actions { border: 0; }
 .language-option {
-    width: 74px;
     height: 44px;
     background: transparent;
     font-size: .8rem;
     font-weight: 500;
 }
 .language-option + .language-option { border-left: 0; }
-.language-option[aria-pressed="true"] { background: #edf2f4; color: var(--accent-color); }
+.language-option[aria-pressed="true"] { background: #edf2f4; }
 @media (max-width: 768px) {
     .nav-actions .header-link { width: 54px; flex-basis: 54px; font-size: 13px; }
     .language-option { width: 60px; font-size: 11px; }
@@ -1006,7 +955,6 @@ a:hover {
 .nav-actions .header-link[aria-current="page"] {
     z-index: 1;
     margin-bottom: -1px;
-    height: 45px;
     background: var(--bg-color);
     color: var(--primary-color);
     font-weight: 600;
@@ -1028,7 +976,6 @@ a:hover {
     right: -10px;
     background: radial-gradient(circle at 100% 0, transparent 10px, var(--bg-color) 10.5px);
 }
-.language-actions { margin-bottom: 6px; }
 /* Keep the bar low while retaining 44px interaction targets. */
 .site-header { padding-top: .5rem; }
 .nav-actions .header-link[aria-current="page"] { height: 44px; }
