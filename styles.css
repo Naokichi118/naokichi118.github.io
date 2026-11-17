@@ -1189,7 +1189,7 @@ a:hover {
 
 /* Small, immediate year jumps next to the Talks heading. */
 .talks-heading-row { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.25rem; }
-.talks-heading-row h2 { margin: 0; }
+.content-page > .main-content > .section .talks-heading-row h2 { margin: 0; padding: 0; }
 .talk-year-nav { display: flex; gap: .35rem; }
 .talk-year-nav a {
     display: inline-flex; align-items: center; justify-content: center;
