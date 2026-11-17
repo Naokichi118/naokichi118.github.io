@@ -919,3 +919,23 @@ a:hover {
     .preprint-card, .published-card { row-gap: 0.5rem; }
     .preprint-authors, .preprint-links { margin-top: 0; }
 }
+
+/* Paper references use ordinary text links and a tighter card rhythm. */
+.preprint-card, .published-card { padding: 0.6rem 0.8rem; row-gap: 0.3rem; }
+.preprints-grid, .published-grid { gap: 0.5rem; }
+.preprint-authors, .preprint-links { margin-top: 0.25rem; }
+.preprint-links, .published-links { display: flex; flex-wrap: wrap; gap: 0.25rem 0.8rem; }
+.preprint-links .badge-arxiv, .published-links .badge-arxiv {
+    display: inline;
+    border: 0;
+    border-radius: 0;
+    background: none;
+    padding: 0;
+    font-size: 0.88rem;
+    font-weight: 400;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+@media (max-width: 600px) {
+    .preprint-authors, .preprint-links { margin-top: 0; }
+}
