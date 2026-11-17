@@ -1007,3 +1007,18 @@ a:hover {
 .content-page .paper-year { color: var(--secondary-color); }
 .content-page .preprint-links,
 .content-page .published-links { margin-top: .25rem; }
+
+/* Plain talk entries, matching the bibliography. */
+.content-page .talk-header { display: block; }
+.content-page .talk-title { font-weight: 600; }
+.content-page .talk-date {
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    padding: 0;
+    margin-top: .2rem;
+    font-size: .9rem;
+    font-weight: 400;
+}
+.content-page .talk-event,
+.content-page .talk-location { margin-top: .2rem; font-size: .95rem; }
