@@ -1144,3 +1144,40 @@ a:hover {
 .site-header { padding-top: .25rem; }
 .nav-actions .header-link[aria-current="page"] { height: 44px; }
 .language-actions { margin-bottom: 0; }
+
+/* A quiet inset language switch with full-height touch targets. */
+.language-actions {
+    position: relative;
+    isolation: isolate;
+    overflow: visible;
+    background: transparent;
+    border-radius: 12px;
+}
+.language-actions::before {
+    content: "";
+    position: absolute;
+    inset: 6px 0;
+    z-index: -2;
+    border-radius: 12px;
+    background: #e5e5df;
+}
+.language-option,
+.language-option[aria-pressed="true"] {
+    position: relative;
+    background: transparent;
+    color: var(--secondary-color);
+    border-radius: 12px;
+    transition: none;
+}
+.language-option[aria-pressed="true"] {
+    color: var(--accent-color);
+    font-weight: 600;
+}
+.language-option[aria-pressed="true"]::before {
+    content: "";
+    position: absolute;
+    inset: 8px 2px;
+    z-index: -1;
+    border-radius: 10px;
+    background: var(--bg-color);
+}
