@@ -1088,5 +1088,6 @@ a:hover {
 
 @media (min-width: 901px) {
     .page-layout { grid-template-columns: clamp(320px, 25vw, 340px) minmax(0, 1fr); }
+    .sidebar-text { text-align: center; }
     .sidebar .profile-email { font-size: .9rem; white-space: nowrap; overflow-wrap: normal; }
 }
