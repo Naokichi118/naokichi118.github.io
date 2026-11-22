@@ -932,13 +932,13 @@ a:hover {
 .language-option + .language-option { border-left: 0; }
 .language-option[aria-pressed="true"] { background: #edf2f4; }
 @media (max-width: 768px) {
-    .nav-actions .header-link { width: 54px; flex-basis: 54px; font-size: 13px; }
+    .nav-actions .header-link { width: clamp(58px, calc((100vw - 176px) / 3), 66px); flex-basis: auto; font-size: 13px; }
     .language-option { width: 60px; font-size: 11px; }
 }
 @media (max-width: 360px) {
     .header-top { gap: .25rem; }
     .nav-actions { gap: 0; }
-    .nav-actions .header-link { width: 46px; flex-basis: 46px; }
+    .nav-actions .header-link { width: 50px; }
     .language-option { width: 56px; }
 }
 
